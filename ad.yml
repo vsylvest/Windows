@@ -3,4 +3,4 @@
   roles:
   - win_ad_install
   
-  - tags: windows 
+  tags: windows 
