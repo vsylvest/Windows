@@ -1,8 +1,7 @@
 ---
-- name: configure SSH on Windows
-  hosts: windows
-  include_vars: ./win_ssh_var.yml
-  roles
-    - win_package_install
-    - win_service_config
-    - win_firewall
+ - hosts: windows
+   include_vars: ./win_ssh_var.yml
+   roles:
+     - win_package_install
+     - win_service_config
+     - win_firewall
