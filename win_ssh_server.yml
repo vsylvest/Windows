@@ -1,6 +1,6 @@
 - hosts: windows
-  var_files:
-    - ./win_ssh_var.yml
+  vars_files:
+    - win_ssh_var.yml
   roles:
     - win_package_install
     - win_service_config
