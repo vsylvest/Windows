@@ -1,7 +1,7 @@
 - hosts: windows
-  include_vars:
-    file: ./win_ssh_var.yml
+  var_files:
+    - ./win_ssh_var.yml
   roles:
-     - win_package_install
-     - win_service_config
-     - win_firewall
+    - win_package_install
+    - win_service_config
+    - win_firewall
