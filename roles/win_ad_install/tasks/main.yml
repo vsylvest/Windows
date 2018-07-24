@@ -12,6 +12,7 @@
     
   - name: reboot once DC created
     win_reboot:
+      reboot_timeout: 1200
     when: active_directory_controllers.reboot_required
 
   - name: List Domain Controllers
