@@ -1,7 +1,7 @@
 ---
 - name:  Basic Windows Playbook
   hosts:
-    windows
+    all
   tasks:
     - name: install procexp
       win_chocolatey: 
