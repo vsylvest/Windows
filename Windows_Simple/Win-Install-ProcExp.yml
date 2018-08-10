@@ -1,0 +1,9 @@
+---
+- name:  Basic Windows Playbook
+  hosts:
+    windows
+  tasks:
+    - name: install procexp
+      win_chocolatey: 
+        name: procexp
+        state: present

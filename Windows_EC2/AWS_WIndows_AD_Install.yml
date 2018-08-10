@@ -1,0 +1,13 @@
+---
+#- name: ping new windows instances added with add_host
+#  hosts: windows
+#  gather_facts: false
+#  tasks:
+#    - name: ping windows instance
+#      action: win_ping
+- name: ping new windows instances added with add_host
+  hosts: windows
+  gather_facts: false
+  tasks:
+    - name: ping windows instance
+      action: win_ping

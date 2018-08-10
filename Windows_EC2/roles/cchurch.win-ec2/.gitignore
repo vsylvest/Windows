@@ -1,0 +1,5 @@
+*.retry
+test/inventory.win-ec2
+test/test_id_rsa*
+test/cchurch-*
+test/inventory.cchurch*

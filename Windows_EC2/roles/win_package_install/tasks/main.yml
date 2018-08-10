@@ -1,0 +1,6 @@
+- name: Install openssh package
+  win_chocolatey:
+    name: "{{ package_name }}"
+    params: "{{ parameters }}"
+    state: present
+  

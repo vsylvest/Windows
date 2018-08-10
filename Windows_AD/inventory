@@ -1,0 +1,7 @@
+[windows]
+192.168.96.227
+
+[windows:vars]
+ansible_user: Adminstrator
+ansible_password: s!984V62729
+ansible_connection: winrm

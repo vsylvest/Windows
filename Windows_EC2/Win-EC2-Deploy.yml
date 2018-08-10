@@ -1,0 +1,34 @@
+- name: Deploy Windows on EC2
+  hosts: localhost
+  gather_facts: False
+  tasks:
+  - name: Create Windows instance in ec2
+    ec2:
+      image: 'ami-35832657'
+      instance_type: 't2.medium'
+      key_name: 'ec2-key'
+      region: 'ap-southeast-2'
+      wait: true
+      instance_id: 'windemo'
+      instance_tags: "{'win':'demo', 'Name':'Windows-Demo-SQL'}"
+      vpc_subnet_id: 'subnet-3e80d577'
+      assign_public_ip: yes
+      group_id: 'sg-0d8dc8fbfc8484c7a'
+    register: ec2
+    tags: create
+    
+  - name: associate an elastic IP with an instance
+    ec2_eip:
+      device_id: windemo
+      region: 'ap-southeast-2'
+      ip: 13.238.180.181
+    
+  - name: Wait for SSH to come up
+    wait_for:
+      host: "{{ item.public_dns_name }}"
+      port: 22
+      delay: 60
+      timeout: 320
+      state: started
+    with_items: "{{ ec2.instances }}"
+    tags: create

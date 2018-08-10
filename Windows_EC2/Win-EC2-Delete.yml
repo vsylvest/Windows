@@ -1,0 +1,9 @@
+- name: Delete Windows on EC2
+  hosts: localhost
+  gather_facts: False
+  tasks:
+  - name: delete existing windemo ec2 instance(s)
+    ec2:
+      state: 'absent'
+      instance_ids: 'windemo'
+      region: 'ap-southeast-2'

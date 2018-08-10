@@ -1,0 +1,7 @@
+    - hosts: localhost
+      vars:
+        win_ec2_name_prefix: Demo
+      roles:
+        - role: cchurch.win-ec2
+          win_ec2_action: destroy       
+
