@@ -95,6 +95,11 @@
   with_items: '{{win_ec2_instances.results}}'
   register: win_ec2_passwords
   when: 'win_ec2_images and "create" in win_ec2_action and win_ec2_instances is defined'
+  
+- name: obtain initial passwords for win ec2 instance(s)
+  debug:
+    vars: win_ec2_password.stdout
+  
 
 - name: add win ec2 instance(s) to inventory
   add_host:
