@@ -1,3 +1,10 @@
-- hosts: windows
+--
+- name: ICreate Active Directory Users
+  hosts: tag_Name_Demo_server_2016
+  vars:
+    ansible_connection: winrm
+    ansible_winrm_transport: basic
+    ansible_winrm_server_cert_validation: ignore
+  gather_facts: false
   roles:
     - win_ad_users
