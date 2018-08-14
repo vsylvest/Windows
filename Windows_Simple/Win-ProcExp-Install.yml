@@ -6,4 +6,4 @@
     - name: install procexp
       win_chocolatey: 
         name: putty
-        state: absent
+        state: present
