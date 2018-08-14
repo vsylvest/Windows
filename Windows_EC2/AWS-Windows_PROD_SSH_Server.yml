@@ -1,0 +1,14 @@
+---
+- name: Install SSH Server
+  hosts: tag_Name_Demo_server_2016
+  vars:
+    ansible_connection: winrm
+    ansible_winrm_transport: basic
+    ansible_winrm_server_cert_validation: ignore
+  gather_facts: false
+  vars_files:
+    - win_ssh_var.yml
+  roles:
+    - win_package_install
+    - win_service_config
+    - win_firewall
