@@ -1,0 +1,9 @@
+---
+- name:  Basic Windows Playbook
+  hosts:
+    all
+  tasks:
+    - name: install procexp
+      win_chocolatey: 
+        name: putty
+        state: absent

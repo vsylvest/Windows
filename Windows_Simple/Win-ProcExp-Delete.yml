@@ -5,5 +5,5 @@
   tasks:
     - name: install procexp
       win_chocolatey: 
-        name: procexp
-        state: present
+        name: putty
+        state: absent
