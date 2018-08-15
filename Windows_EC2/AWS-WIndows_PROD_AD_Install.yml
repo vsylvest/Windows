@@ -1,6 +1,6 @@
 ---
 - name: Install Active Directory
-  hosts: tag_Name_Demo_server_2016
+  hosts: tag_Name_Prod_server_2016
   vars:
     ansible_connection: winrm
     ansible_winrm_transport: basic
