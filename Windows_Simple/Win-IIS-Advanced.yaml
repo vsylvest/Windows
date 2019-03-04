@@ -1,5 +1,5 @@
 ---
-- hosts: Windows
+- hosts: mswin
   name: This is a play within a playbook
   vars:
     iis_sites:
