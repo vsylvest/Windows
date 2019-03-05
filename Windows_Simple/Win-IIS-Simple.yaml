@@ -1,3 +1,5 @@
+- hosts: all
+  name: This is a play within a playbook
   tasks:
    - name: install iis
      win_feature:
@@ -11,5 +13,5 @@
 
    - name: Create website index.html
      win_copy:
-       content: "{{ iis_test_message }}"
+       content: "Hello World"
        dest: C:\Inetpub\wwwroot\index.html
