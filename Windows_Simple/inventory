@@ -3,6 +3,6 @@ s1-win1.ansibleworkshop.com
 
 [windows:vars]
 ansible_ssh_user=student1
-ansible_ssh_pass=AnsibleWorkshop21#
+ansible_ssh_pass="AnsibleWorkshop21#"
 ansible_connection=winrm
 ansible_winrm_server_cert_validation=ignore
