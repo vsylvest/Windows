@@ -1,18 +1,8 @@
 [windows]
-192.168.96.227
-
-
-[azwin]
-52.187.235.216
-
-[azwin:vars]
-ansible_ssh_user=Administrator
-ansible_ssh_pass=Redhat@123
-ansible_connection=winrm
-ansible_winrm_server_cert_validation=ignore
+s1-win1.ansibleworkshop.com
 
 [windows:vars]
-ansible_ssh_user=Administrator
-ansible_ssh_pass=Redhat@123
+ansible_ssh_user=student1
+ansible_ssh_pass=AnsibleWorkshop21#
 ansible_connection=winrm
 ansible_winrm_server_cert_validation=ignore
