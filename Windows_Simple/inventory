@@ -1,2 +1,8 @@
 [windows]
-Windows-1 ansible_host=40.127.69.187 ansible_user=az-user ansible_pass=Password@123
+Windows-1 ansible_host=40.127.69.187
+
+[windows:vars]
+ansible_ssh_user=az-user
+ansible_ssh_pass=Password@123
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
