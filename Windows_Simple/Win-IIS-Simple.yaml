@@ -1,5 +1,8 @@
 - hosts: all
-  name: This is a play within a playbook
+  name: Install IIS on Windows
+  vars:
+    ansible_connection: winrm
+    ansible_winrm_server_cert_validation: ignore
   tasks:
    - name: install iis
      win_feature:
