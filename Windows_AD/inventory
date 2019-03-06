@@ -1,4 +1,4 @@
-windows]
+[windows]
 Windows-1 ansible_host=40.127.69.187
 
 [windows:vars]
