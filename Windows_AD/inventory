@@ -1,7 +1,8 @@
-[windows]
-192.168.96.227
+windows]
+Windows-1 ansible_host=40.127.69.187
 
 [windows:vars]
-ansible_user: Adminstrator
-ansible_password: s!984V62729
-ansible_connection: winrm
+ansible_ssh_user=az-user
+ansible_ssh_pass=Password@123
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
