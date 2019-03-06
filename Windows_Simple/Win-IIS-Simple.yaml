@@ -8,6 +8,11 @@
      win_feature:
        name: Web-Server
        state: present
+       
+   - name: install iis
+     win_feature:
+       name: Web-Server
+       state: present
 
    - name: start iis service
      win_service:
