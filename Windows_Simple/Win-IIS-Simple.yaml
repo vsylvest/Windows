@@ -19,7 +19,12 @@
        name: W3Svc
        state: started
 
-   - name: Create website index.html
-     win_copy:
-       content: "Hello AGL"
-       dest: C:\Inetpub\wwwroot\index.html
+#   - name: Create website index.html
+#     win_copy:
+#       content: "Hello AGL"
+#       dest: C:\Inetpub\wwwroot\index.html
+       
+   - name: Template simple web site to iis_site_path as index.html
+     win_template:
+        src: 'index.html.j2'
+        dest: C:\Inetpub\wwwroot\index.html
