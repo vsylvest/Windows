@@ -21,8 +21,8 @@
        
    - name: Download logo to specified path
      win_get_url:
-       url: https://github.com/vsylvest/Windows/blob/master/Windows_Simple/AGL_Logo_Vertical_180px_RGB.png
-       dest: C:\Inetpub\wwwroot\AGL_LOGO.png
+       url: https://github.com/vsylvest/Windows/blob/master/Windows_Simple/AGL-Logo.jpg
+       dest: C:\Inetpub\wwwroot\AGL_LOGO.jpg
 
        
    - name: Template simple web site to iis_site_path as index.html
