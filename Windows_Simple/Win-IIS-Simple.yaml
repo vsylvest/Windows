@@ -16,9 +16,14 @@
 
    - name: Create website index.html
      win_copy:
-       src: "AGL_Logo_Vertical_180px_RGB.png"
-       dest: C:\Inetpub\wwwroot\AGL_Logo.png
-       remote_src: yes
+       content: "Hello AGL"
+       dest: C:\Inetpub\wwwroot\index.html
+       
+   - name: Download earthrise.jpg to specified path
+     win_get_url:
+       url: https://github.com/vsylvest/Windows/blob/master/Windows_Simple/AGL_Logo_Vertical_180px_RGB.png
+       dest: C:\Inetpub\wwwroot\AGL_LOGO.png
+
        
    - name: Template simple web site to iis_site_path as index.html
      win_template:
