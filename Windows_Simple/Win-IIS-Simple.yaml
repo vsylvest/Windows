@@ -21,5 +21,5 @@
 
    - name: Create website index.html
      win_copy:
-       content: "Hello World"
+       content: "Hello AGL"
        dest: C:\Inetpub\wwwroot\index.html
